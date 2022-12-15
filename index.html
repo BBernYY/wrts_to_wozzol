@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="input" id="inp" cols="30" rows="10"></textarea>
+    <br>
+    <button onclick="wrts_to_wozzol()">wrts to wozzol</button>
+    <p id="out"></p>
+    <script type="text/javascript">
+            function wrts_to_wozzol(){
+                let li = []
+                var inp = document.getElementById('inp').value.split("\n")
+                var out = document.getElementById('out')
+                for (let i = 0; i < inp.length; i += 2) {
+                    li.push(`${inp[i]}=${inp[i + 1]}`);
+                }
+                out.innerHTML = li.join("<br>")
+                return li
+            }
+        </script>
+</body>
+</html>
